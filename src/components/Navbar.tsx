@@ -10,18 +10,19 @@ import { SidebarTrigger, useSidebar } from "./ui/sidebar";
 
 
 export default function Navbar(){
-    const {theme,setTheme} = useTheme();
-    const {} = useSidebar()
+    const { theme,setTheme }  = useTheme();
+    const { toggleSidebar } = useSidebar();
     return(
         <nav className="p-4 flex items-center justify-between">
             {/* LEFT */}
-          <SidebarTrigger/> 
+            <SidebarTrigger/> 
+        {/*  <Button variant="outline" onClick={toggleSidebar}>
+            Custom Button
+         </Button> */}
 
-         
            {/* RIGHT */}
            <div className="flex items-center gap-4">
            <Link href="/">Dashboard</Link> 
-
             {/* THEME MENU */}
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
