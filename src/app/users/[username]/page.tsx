@@ -1,6 +1,8 @@
 import CardList from "@/components/CardList";
+import { Badge } from "@/components/ui/badge";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Progress } from "@/components/ui/progress";
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 
 export default function SingleUserPage(){
@@ -77,8 +79,30 @@ export default function SingleUserPage(){
                 <div className="space-y-4 mt-4">
                   <div className="flex flex-col gap-2 mb-8">
                     <p className="text-sm text-muted-foreground">Profile Completion</p>
+                    <Progress value={66} />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">Username:</span>
+                    <span>Jecilia Teixeira</span>
+                  </div>
+                   <div className="flex items-center gap-2">
+                    <span className="font-bold">Email:</span>
+                    <span>Jeciliateixeira@gmail.com</span>
+                  </div>
+                   <div className="flex items-center gap-2">
+                    <span className="font-bold">Phone:</span>
+                    <span>+244 912 456 789</span>
+                  </div>
+                   <div className="flex items-center gap-2">
+                    <span className="font-bold">Location:</span>
+                    <span>Luanda, LA</span>
+                  </div>
+                   <div className="flex items-center gap-2">
+                    <span className="font-bold">Role:</span>
+                   <Badge>Admin</Badge>
                   </div>
                 </div>
+                <p className="text-sm text-muted-foreground mt-4">Joined on 2025.01.01</p>
                </div>
                 {/*  CARD LIST CONTAINER */}
                <div className="bg-primary-foreground p-4 rounded-lg">
